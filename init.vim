@@ -64,6 +64,7 @@ Plugin 'nathanaelkane/vim-indent-guides'
 " vim-session is a extended session management for Vim
 " https://github.com/xolox/vim-session
 Plugin 'xolox/vim-session'
+Plugin 'xolox/vim-misc'
 
 call vundle#end()               " required
 filetype plugin indent on       " required
