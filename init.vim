@@ -3,7 +3,7 @@
 " ====================================================
 set nocompatible               " be improved, required
 filetype off                   " required
-" set the runtime path to include Vundle and initialize
+" Set the runtime path to include Vundle and initialize
 set rtp+=~/.config/nvim/bundle/Vundle.vim
 
 call vundle#begin('~/.config/nvim/bundle')            " required
@@ -24,25 +24,25 @@ Plugin 'ctrlpvim/ctrlp.vim'
 Plugin 'vim-airline/vim-airline'
 
 " vim-gitgutter shows a git diff in the left column
+" https://github.com/airblade/vim-gitgutter
 Plugin 'airblade/vim-gitgutter'
 
 " nerdtree is a directory browsing side bar to find files
+" https://github.com/scrooloose/nerdtree
 Plugin 'scrooloose/nerdtree'
-  " opens the nerd tree
+  " Toggle the nerd tree
   nnoremap <leader>c :NERDTreeToggle<CR>
 
   " Finds the open file in the nerd tree
   nnoremap <leader>r :NERDTreeFind<CR>
 
-" Plugin 'pangloss/vim-javascript'
+" vim-bad-whitespace highlights whitespace at the end of lines
+" https://github.com/bitc/vim-bad-whitespace
+Plugin 'bitc/vim-bad-whitespace'
 
-" Plugin 'leafgarland/typescript-vim'
-
-" Plugin 'peitalin/vim-jsx-typescript'
-
-" Plugin 'bitc/vim-bad-whitespace'
-
-" Plugin 'w0rp/ale'
+" ale is a asynchronous linting and language server protocol client
+" https://github.com/w0rp/ale
+Plugin 'w0rp/ale'
   let g:ale_sign_column_always = 1      " Keep the error column gutter always open
   let g:ale_linters = {
     \'go': ['go build', 'golint', 'go vet'],
@@ -53,6 +53,7 @@ Plugin 'scrooloose/nerdtree'
   let g:ale_sign_warning = '⚠'
 
 " vim-indent-guides highlights indentation
+" https://github.com/nathanaelkane/vim-indent-guides
 Plugin 'nathanaelkane/vim-indent-guides'
   let g:indent_guides_enable_on_vim_startup = 1   " Is enabled on startup
   let indent_guides_auto_colors = 0               " Disable auto colors
