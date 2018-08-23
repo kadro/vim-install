@@ -6,7 +6,7 @@ filetype off                   " required
 " set the runtime path to include Vundle and initialize
 set rtp+=~/.config/nvim/bundle/Vundle.vim
 
-call vundle#begin()            " required
+call vundle#begin('~/.config/nvim/bundle')            " required
 Plugin 'VundleVim/Vundle.vim'  " required
 
 " ====================================================
@@ -63,8 +63,9 @@ Plugin 'nathanaelkane/vim-indent-guides'
 
 " vim-session is a extended session management for Vim
 " https://github.com/xolox/vim-session
-Plugin 'xolox/vim-session'
 Plugin 'xolox/vim-misc'
+Plugin 'xolox/vim-session'
+  let g:session_directory = '~/.config/nvim/sessions/'
 
 call vundle#end()               " required
 filetype plugin indent on       " required
