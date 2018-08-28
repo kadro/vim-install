@@ -52,15 +52,10 @@ Plugin 'w0rp/ale'
   let g:ale_sign_error = '⤫'
   let g:ale_sign_warning = '⚠'
 
-" vim-indent-guides highlights indentation
-" https://github.com/nathanaelkane/vim-indent-guides
-Plugin 'nathanaelkane/vim-indent-guides'
-  let g:indent_guides_enable_on_vim_startup = 1   " Is enabled on startup
-  let indent_guides_auto_colors = 0               " Disable auto colors
-  let indent_guides_guide_size = 1                " The size of the indentation guides
-
-  hi IndentGuidesOdd  ctermbg=236 guibg=#202020
-  hi IndentGuidesEven ctermbg=238 guibg=#333333
+" indentLine highlights indentation
+" https://github.com/Yggdroot/indentLine
+Plugin 'Yggdroot/indentLine'
+  let g:indentLine_char = '┆'
 
 " vim-session is a extended session management for Vim
 " https://github.com/xolox/vim-session
@@ -130,6 +125,9 @@ nnoremap <F4> :set ignorecase!<CR>
 
 " Source vimrc/init.vim file
 nnoremap <leader>vv :source ~/.config/nvim/init.vim<CR>
+
+" Search and replace word under cursor
+nnoremap <leader>d :%s/\<<C-r><C-w>\>/
 
 " Navigate between vim panes
 nnoremap <C-J> <C-W><C-J>
